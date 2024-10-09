@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".RelativeLayout">
+
+    <TextView
+        android:id="@+id/textJudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to My App"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
+
+    <ImageView
+        android:id="@+id/imageNew"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/textJudul"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageNew"
+        android:layout_marginTop="16dp"
+        android:hint="Enter your name"/>
+
+    <RelativeLayout
+        android:id="@+id/Button"
+        android:layout_marginTop="16dp"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/textName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp">
+        <Button
+            android:id="@+id/tombol_submit"
+            android:text="Submit"
+            android:layout_width="150dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_toRightOf="@+id/Button"
+        android:layout_below="@+id/textName"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        >
+
+        <Button
+            android:id="@+id/tombol_cancel"
+            android:text="Cancel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
